@@ -51,6 +51,7 @@ public class SmartphoneCharacterController : MonoBehaviour {
 		if(Input.GetButton("Fire1") || !mouseDownMode) {
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
+			//Fieldタグ(壁？、崖？にレイを飛ばしてあたった場所へ移動させる))
 			if(Physics.Raycast(ray, out hit, rayRange, LayerMask.GetMask ("Field"))) {
 				targetPosition = hit.point;
 				journeyLength = Vector3.Distance(transform.position, targetPosition);
