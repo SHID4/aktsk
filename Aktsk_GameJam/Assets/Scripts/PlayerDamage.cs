@@ -25,6 +25,6 @@ public class PlayerDamage : MonoBehaviour {
 		// todo if(hand && grabbing) 
 			// OnDamage();
 
-		
+
 	}
 }
