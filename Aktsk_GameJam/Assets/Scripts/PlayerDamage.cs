@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerDamage : MonoBehaviour {
 
+	
 	public delegate void DamageHandler();
 	public event DamageHandler OnDamage;
 	// Use this for initialization
@@ -18,7 +19,12 @@ public class PlayerDamage : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		
-		OnDamage();
+		// todo if(hand && grabbing) 
+			// OnDamage();
+
+		//今はとりあえずスペースでダメージ減らします
+		if (Input.GetKeyUp(KeyCode.Space)){
+			OnDamage();
+		}
 	}
 }
