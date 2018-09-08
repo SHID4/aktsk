@@ -4,7 +4,12 @@ using UnityEngine;
 using UnityChan;
 
 public class RandomMatchmaker : MonoBehaviour {
-	public GameObject photonObject;
+	public GameObject photonObjectHand;
+	public GameObject photonObjectPlayer;
+	private GameObject photonObject;
+
+	private bool joined = false;
+	private bool lobby = false;
 	//[SerializeField]
 	//Text joinedMembersText;
 
@@ -14,12 +19,14 @@ public class RandomMatchmaker : MonoBehaviour {
 		// 適当にニックネームを設定
 		//PhotonNetwork.playerName = "guest" + UnityEngine.Random.Range(1000, 9999);
 
-		if (Application.platform == RuntimePlatform.WindowsPlayer) {
+		if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor) {
 			PhotonNetwork.playerName = "Windows";
+			photonObject = photonObjectHand;
 			print ("Windows");
 		}
 		else  {
 			PhotonNetwork.playerName = "else";
+			photonObject = photonObjectPlayer;
 			print (Application.platform);
 		}
 		print ("now room member number" + PhotonNetwork.playerList.Length);
@@ -28,14 +35,18 @@ public class RandomMatchmaker : MonoBehaviour {
 	void Update()
 	{
 		// windowsPCからの接続と(WindowsMR接続済みと仮定する)，それ以外からの接続が2つ以上でルームに入る（ゲーム開始）
-		if (this.inWindows() && PhotonNetwork.playerList.Length >= 2) {
-			PhotonNetwork.JoinRandomRoom ();
+		if (lobby) { 
+			if (this.inWindows() && PhotonNetwork.playerList.Length >= 2 && joined == false)
+			{
+				PhotonNetwork.JoinRandomRoom();
+				joined = true;
+			}
 		}
-
 	}
 
 	void OnJoinedLobby()
 	{
+		lobby = true;
 		//PhotonNetwork.JoinRandomRoom();
 	}
 
@@ -90,7 +101,7 @@ public class RandomMatchmaker : MonoBehaviour {
 		// ロビーにWindowsからの接続があるかどうかを判定する
 		foreach (var p in PhotonNetwork.playerList)
 		{
-			if (p.name.Equals ("")) {
+			if (p.name.Contains("Windows")) {
 				return true;
 			}
 		}

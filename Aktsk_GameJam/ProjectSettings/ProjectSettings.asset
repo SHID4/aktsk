@@ -160,7 +160,6 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.blue.Hawaii
   buildNumber: {}
-
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0

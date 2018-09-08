@@ -195,7 +195,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8de757a2adbb54d5895e7fd1e6412ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonObject: {fileID: 1234704704761640, guid: 42816b12867214893b2ec6eed8b72038,
+  photonObjectHand: {fileID: 1234704704761640, guid: 42816b12867214893b2ec6eed8b72038,
+    type: 2}
+  photonObjectPlayer: {fileID: 1234704704761640, guid: 42816b12867214893b2ec6eed8b72038,
     type: 2}
 --- !u!1001 &814876588
 Prefab:
