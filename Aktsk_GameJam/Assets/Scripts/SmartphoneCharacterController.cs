@@ -62,8 +62,8 @@ public class SmartphoneCharacterController : MonoBehaviour {
 		}
 
 		// Debug.Log(rangeRestricter.GetScreenBottomRight());
-			Debug.Log("length =" + journeyLength);
-			Debug.Log("fracJourney =" + fracJourney);
+			// Debug.Log("length =" + journeyLength);
+			// Debug.Log("fracJourney =" + fracJourney);
 
 		// if(IsMove())
 			transform.position = Vector3.Lerp(transform.position,targetPosition,fracJourney);

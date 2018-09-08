@@ -14,7 +14,10 @@ public class PlayerDamage : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		//今はとりあえずスペースでダメージ減らします
+		if (Input.GetKeyUp(KeyCode.Space)){
+			OnDamage();
+		}
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -22,9 +25,6 @@ public class PlayerDamage : MonoBehaviour {
 		// todo if(hand && grabbing) 
 			// OnDamage();
 
-		//今はとりあえずスペースでダメージ減らします
-		if (Input.GetKeyUp(KeyCode.Space)){
-			OnDamage();
-		}
+		
 	}
 }

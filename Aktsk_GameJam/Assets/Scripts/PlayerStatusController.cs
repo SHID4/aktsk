@@ -12,6 +12,7 @@ public class PlayerStatusController : MonoBehaviour {
 		//ダメージを受けた時
 		playerDamage.OnDamage +=() =>{
 			hp--;
+			Debug.Log("HP減少:" + hp);
 		};
 	}
 	
