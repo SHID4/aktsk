@@ -35,7 +35,10 @@ public class SmartphoneCharacterController : MonoBehaviour {
 	private float journeyLength = 0.1f;
 	float distCovered;
 	float fracJourney;
-
+	[SerializeField]
+	private PlayerStatusController playerStatus;
+	[SerializeField]
+	private Transform respawnTransform;
 
 	void Start () {
 		// characterController = GetComponent<CharacterController>();
@@ -44,7 +47,14 @@ public class SmartphoneCharacterController : MonoBehaviour {
 		rangeRestricter = GetComponent<RangeRestricter>();
 		targetPosition = transform.position;
 		velocity = Vector3.zero;
-	}
+		
+		//死亡したときの処理
+		playerStatus.OnDeath += ()=> {
+			playerStatus.hp = 2;
+			transform.position = respawnTransform.position;
+			targetPosition = transform.position;
+			};
+		}
  
 	void Update () {
 		//　マウスクリックまたはmouseDownModeがOffの時マウスの位置を移動する位置にする
