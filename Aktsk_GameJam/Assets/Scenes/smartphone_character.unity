@@ -207,6 +207,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 0.5
+--- !u!1001 &380292807
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4103327069673170, guid: 0a49bd2a4d2dfbe469435dde324445a0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103327069673170, guid: 0a49bd2a4d2dfbe469435dde324445a0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103327069673170, guid: 0a49bd2a4d2dfbe469435dde324445a0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103327069673170, guid: 0a49bd2a4d2dfbe469435dde324445a0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103327069673170, guid: 0a49bd2a4d2dfbe469435dde324445a0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103327069673170, guid: 0a49bd2a4d2dfbe469435dde324445a0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103327069673170, guid: 0a49bd2a4d2dfbe469435dde324445a0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103327069673170, guid: 0a49bd2a4d2dfbe469435dde324445a0, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114730058134168800, guid: 0a49bd2a4d2dfbe469435dde324445a0,
+        type: 2}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114730058134168800, guid: 0a49bd2a4d2dfbe469435dde324445a0,
+        type: 2}
+      propertyPath: instantiationId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792938657912492, guid: 0a49bd2a4d2dfbe469435dde324445a0, type: 2}
+      propertyPath: m_Name
+      value: HandForWindows
+      objectReference: {fileID: 0}
+    - target: {fileID: 114136245741675954, guid: 0a49bd2a4d2dfbe469435dde324445a0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0a49bd2a4d2dfbe469435dde324445a0, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &502297071
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,8 +348,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 502297071}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.1, y: 2, z: -0.3}
-  m_LocalScale: {x: 1.7390939, y: 1, z: 1.388868}
+  m_LocalPosition: {x: -0.119, y: 0.877, z: 0.81}
+  m_LocalScale: {x: 0.1901, y: 1, z: 0.1585}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
