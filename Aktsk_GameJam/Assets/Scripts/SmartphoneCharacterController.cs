@@ -69,6 +69,9 @@ public class SmartphoneCharacterController : MonoBehaviour {
 				 fracJourney = distCovered / journeyLength;
 
 			}
+
+			
+
 		}
 
 		// Debug.Log(rangeRestricter.GetScreenBottomRight());

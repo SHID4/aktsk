@@ -8,6 +8,7 @@ public class PlayerStatusController : MonoBehaviour {
 	[SerializeField]
 	private PlayerDamage playerDamage;
 	// Use this for initialization
+	[SerializeField]
 	private SceneChanger sceneChanger;
 	public delegate void DeathHandler();
 	public event DeathHandler OnDeath;
@@ -19,9 +20,10 @@ public class PlayerStatusController : MonoBehaviour {
 	[SerializeField]
 	private Renderer renderer_;
 	private int count;
+	[SerializeField]
 	void Start () {
 
-		sceneChanger = new SceneChanger();
+		
 		nowTime = Time.time;
 
 		//ダメージを受けた時

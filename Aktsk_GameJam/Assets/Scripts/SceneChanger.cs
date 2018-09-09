@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneChanger {
+public class SceneChanger : MonoBehaviour {
 
 	// Use this for initialization
 
@@ -24,6 +24,11 @@ public class SceneChanger {
 
 	 public void ChangeEnd(){
 		SceneManager.LoadScene("End");
+
+	}
+
+	public void ChangeLose(){
+		SceneManager.LoadScene("LOSE");
 
 	}
 }
