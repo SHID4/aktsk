@@ -27,4 +27,10 @@ public class PlayerDamage : MonoBehaviour {
 
 
 	}
+
+
+	public void run(){
+		OnDamage();
+
+	}
 }
