@@ -11,20 +11,22 @@ public class ScrollWindow : MonoBehaviour {
 	private PlayerStatusController playerStatus;
 	[SerializeField]
 	private float startY = 0f;
+	private bool isRespawn = false;
 
 
-	// Use this for initialization
+	// Use this for initializatio n
 	void Start () {
 		playerStatus.OnDeath += ()=>{
+			isRespawn = true;
 			Vector3 targetPosition = new Vector3(transform.position.x, startY, transform.position.z);
-			transform.position = Vector3.Lerp(transform.position,targetPosition,0.01f);
+			transform.position = Vector3.Lerp(transform.position,targetPosition, 1f);
 		};
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		transform.position = new Vector3(transform.position.x, transform.position.y + scrollSpeed * Time.deltaTime, transform.position.z);
 		
+		Vector3 targetposition = new Vector3(transform.position.x, transform.position.y + scrollSpeed * Time.deltaTime, transform.position.z);
+		transform.position = Vector3.Lerp(transform.position, targetposition, 0.5f);
 	}
 }
