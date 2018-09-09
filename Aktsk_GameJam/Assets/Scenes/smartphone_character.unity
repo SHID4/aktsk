@@ -209,6 +209,7 @@ MonoBehaviour:
   scrollSpeed: 0.5
   playerStatus: {fileID: 2124340692}
   startY: 0.63
+  endY: 10
 --- !u!1 &502297071
 GameObject:
   m_ObjectHideFlags: 0
