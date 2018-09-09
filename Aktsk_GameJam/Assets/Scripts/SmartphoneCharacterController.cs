@@ -76,6 +76,7 @@ public class SmartphoneCharacterController : MonoBehaviour {
 			// Debug.Log("fracJourney =" + fracJourney);
 
 		// if(IsMove())
+			Debug.Log(fracJourney);
 			transform.position = Vector3.Lerp(transform.position,targetPosition,fracJourney);
 
 		
