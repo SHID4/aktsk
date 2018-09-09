@@ -11,11 +11,13 @@ public class PositionControll : MonoBehaviour {
 		if(PhotonNetwork.playerName.Equals("Windows")){
 			gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
 			handForWindows = GameObject.Find("HandForWindows");
+			handForWindows.transform.parent = transform.parent;
 		}
 	}
 	
 	void Update ()
 	{
+	/*
 		transform.position = new Vector3(0, 0, 0);
 		transform.rotation = Quaternion.identity;
 
@@ -28,7 +30,7 @@ public class PositionControll : MonoBehaviour {
 			handForWindows.transform.rotation = new Quaternion(lot.x, lot.y, lot.z, lot.w * -1);
 
 			// 反転
-			handForWindows.transform.position *= -1.0f;
+			//handForWindows.transform.position *= -1.0f;
 			//float x = 1.0f - handForWindows.transform.rotation.x;
 			/*
 			float x = handForWindows.transform.rotation.x;
@@ -37,15 +39,11 @@ public class PositionControll : MonoBehaviour {
 			*/
 			//handForWindows.transform.rotation = new Quaternion(x, y, z, 0);
 			//handForWindows.transform.RotateAroundLocal(Vector3.zero, );
-		}
+		//}
 		// コントローラーの位置をこのモデルの位置に代入する
 		transform.position = transform.localPosition;
 		transform.rotation = transform.localRotation;
 		//print(transform.parent.transform.parent.name + " : " + transform.parent.transform.parent.position.z);
-		/*
-			if(PhotonNetwork.playerName.Equals("Windows")){
 
-			}
-			*/
 	}
 }
