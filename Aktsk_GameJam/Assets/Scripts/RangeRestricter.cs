@@ -12,8 +12,8 @@ void Start () {
     _mainCamera = obj.GetComponent<Camera> ();
 
     // 座標値を出力
-    Debug.Log (GetScreenTopLeft ().x + ", " + GetScreenTopLeft ().y);
-    Debug.Log (GetScreenBottomRight ().x + ", " + GetScreenBottomRight ().y);
+//     Debug.Log (GetScreenTopLeft ().x + ", " + GetScreenTopLeft ().y);
+//     Debug.Log (GetScreenBottomRight ().x + ", " + GetScreenBottomRight ().y);
 }
 
 

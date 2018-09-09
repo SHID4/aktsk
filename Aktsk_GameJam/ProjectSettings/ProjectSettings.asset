@@ -271,7 +271,7 @@ PlayerSettings:
   m_BuildTargetGraphicsAPIs: []
   m_BuildTargetVRSettings:
   - m_BuildTarget: Android
-    m_Enabled: 0
+    m_Enabled: 1
     m_Devices:
     - Oculus
   - m_BuildTarget: Metro
@@ -713,7 +713,7 @@ PlayerSettings:
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 9937e994-0c8e-4a03-b684-f559685653f4
-  projectName: 
+  projectName: Aktsk_GameJam
   organizationId: tubalu
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

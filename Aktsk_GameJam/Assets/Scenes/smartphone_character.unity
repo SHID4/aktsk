@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+
   m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
 --- !u!157 &3
 LightmapSettings:
@@ -125,6 +126,7 @@ GameObject:
   - component: {fileID: 295719078}
   - component: {fileID: 295719077}
   - component: {fileID: 295719081}
+  - component: {fileID: 295719082}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -207,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 0.5
+D: 2100000, guid: 4811500b29ca5484ca0f975b0f18bcc1, type: 2}
 --- !u!1001 &380292807
 Prefab:
   m_ObjectHideFlags: 0
@@ -280,7 +283,7 @@ GameObject:
   - component: {fileID: 502297073}
   - component: {fileID: 502297072}
   m_Layer: 8
-  m_Name: Plane
+  m_Name: Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -300,7 +303,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bee0b042f5a18492196dce2dee4602ba, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -361,6 +364,7 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
+
   - component: {fileID: 523438281}
   - component: {fileID: 523438280}
   m_Layer: 0
@@ -370,11 +374,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+
 --- !u!114 &523438280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+
   m_GameObject: {fileID: 523438279}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -388,10 +394,11 @@ MonoBehaviour:
   photonObjectPlayer: {fileID: 1007700937948142, guid: 7953b4134a36beb43871ec22fb15eaba,
     type: 2}
 --- !u!4 &523438281
-Transform:
+  Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+
   m_GameObject: {fileID: 523438279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.43}
@@ -465,3 +472,4 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+
