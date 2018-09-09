@@ -207,6 +207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 0.5
+  playerStatus: {fileID: 2124340692}
+  startY: 0.63
 --- !u!1 &502297071
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +308,7 @@ GameObject:
   - component: {fileID: 714072692}
   - component: {fileID: 714072691}
   - component: {fileID: 714072690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Goal
   m_TagString: Finish
   m_Icon: {fileID: 0}

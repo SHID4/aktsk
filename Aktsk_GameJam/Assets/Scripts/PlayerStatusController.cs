@@ -27,19 +27,18 @@ public class PlayerStatusController : MonoBehaviour {
 		//ダメージを受けた時
 		playerDamage.OnDamage +=() =>{
 			
-			
-			//ダメージが入って三秒は無敵
-			if(Time.time - damageTime <= 3.0f)
-				isInvincible = true;
-			
 			//無敵時間中はhpを減らさない
 			if(!isInvincible){
 				hp--;
 				damageTime = Time.time;
+				Debug.Log("HP減少:" + hp);
+				isInvincible = true;
+
 			}
 			
+			
+			
 
-			Debug.Log("HP減少:" + hp);
 
 
 			//Hpが0になったら死亡イベント発生
@@ -61,6 +60,7 @@ public class PlayerStatusController : MonoBehaviour {
 			StartCoroutine("Invincible",0.2f);
 		}
 
+		// Debug.Log(isInvincible);
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -82,9 +82,17 @@ public class PlayerStatusController : MonoBehaviour {
 
 
 	IEnumerator Invincible(float interval) {
-		while(count <= 10){
+		while(count < 15){
             renderer_.enabled = !renderer_.enabled;
 			count++;
+
+			if(count >= 15){
+				if(!renderer_.isVisible)
+					renderer_.enabled = true;
+				count = 0;
+				isInvincible = false;
+				break;
+			}
             yield return new WaitForSeconds(interval);
 		}
 		if(!renderer_.isVisible)
